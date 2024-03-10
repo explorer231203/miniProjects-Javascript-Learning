@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMPERATURE CONVERTER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            Temprature Converter
+        </div>
+        <div class="display">
+            <label for="userInput" id="inp"></label>
+            <input type="text" id="userInput">
+            <label for="finaloutput" id="fop"></label>
+            <div class="finaloutput" id="finaloutput"></div>
+        </div>
+        <div class="mode">
+            <input type="radio" name="mode" id="c2f">
+            <label for="c2f">CELSLUS TO FAHRENHEIT</label>
+            <input type="radio" name="mode" id = "f2c">
+            <label for="f2c">FAHRENHEIT TO CELSLUS</label>
+        </div>
+        <div class="sub" id="sub">
+            <button type="submit">Convert</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 70vh;
+    border: 3px solid blanchedalmond;
+    margin-left: 30px;
+    margin-top: 30px;
+    border-radius: 27px;
+    box-shadow: 5px 9px 13px 0px rgba(0,0,0,0.81);
+    padding-top: 40px;
+}
+
+body{
+    background-image: url('photo-1709293185602-0bb6f936d97d.avif');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+.heading{
+    height: 10vh;
+    width: 100vw;
+    color: white;
+    font-size: 2.4rem;
+    margin-left: 13vw;
+    margin-top: 13vh;
+}
+.display{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-left: 12vw;
+    margin-bottom: 3vh;
+    
+}
+.display input{
+    width: 8vw;
+    height: 4vh;
+    font-size: 1rem;
+    color: rgb(7, 19, 19);
+    border: 3px solid black;
+
+}
+.finaloutput{
+    width: 8vw;
+    height: 4vh;
+    font-size: 1rem;
+    color: rgb(7, 19, 19);
+    background-color: white;
+    border: 3px solid black;
+}
+.display label{
+    color: white;
+    font-size: 1.5rem;
+}
+.mode{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    color: white;
+    margin-left: 8vw;
+}
+.sub{
+    height: 2vh;
+    width: 5vw;
+    margin-left: 23vw;
+    margin-top: 3vh;
+}
+.sub button{
+    font-size: 1.1rem;
+    border-radius: 4px;
+}
+.sub button:hover{
+    background-color: bisque;
+    opacity: 0.6;
+    scale: 108%;
+}
+.finaloutput{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 1px;
+}
