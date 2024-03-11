@@ -1,0 +1,237 @@
+math - it is a built in object that provides a collection of properties and method
+
+Math.PI will give the mathematical value of pi 
+
+let x= 3.14
+Math.round( x )   will make x = 3
+Math.round( x )   will always round down --> 3.99->3
+Math.ceil( x )    will always round up   --> 3.13->4
+Math.trunc( x )   will remove the decimal part 
+z=Math.pow(x,y)     will give x to the power y
+Math.sqrt( x )
+Math.log( y )\
+let minVal= Math.max(x,y,z);      similarly min
+  
+
+RANDOM NUMBER GENRATOR 
+let RandomNumber = Math.random()  this will genrate a number between [0,1)
+to get a number betwee zero and 6 :-
+    let num = Math.floor(Math.random()*6)+1;
+
+to get a number in  the range between 50 and 100
+     let num = Math.floor(Math.random()*(max-min))+min;
+
+
+CHECKED PROPERTY 
+property that determines the checked state of of an html check box or radio button element \
+
+
+TERNARY OPERATOR 
+it is a shortcut for if else statement \
+syntax---> condition ? ifTrue : ifFalse ;
+use:-
+    let age=19;
+    let msg= age>=18 ? "you are an adult" : "you are a minor";
+
+STRING method
+allows you to manipulate and work with text(strings)
+1) stringVar.charAt(index)
+2) stringVar.indexOf("a");
+3) stringVar.lenght 
+4) stringVar.trim(); removes any whitespaces from start and end
+5) stringVar.toUpperCase();    stringVar.toLowerCase();
+6) stringVar.repeat(4);        repeats the string 4 times 
+7) stringVar.startsWith("a");  returns a boolean value, true if string starts with a otherwise false [stringVar.endsWith(" ")]
+8) stringVar=stringVar.replaceAll("-",""); replaces all - with ""
+9) stringVar.padStart(15,"0") and stringVar.padEnd()       pad with 0 until the string becomes 15 char long 
+
+STRING SLICING
+string.slice(start,endIndex);
+string.slice(start, string.indexOf(" "));
+
+
+method CHAINING 
+calling one method after another in one contineous line of code 
+username = username.trim().charAt(0).toUpperCase()+username.trim().slice(1).toLowerCase();
+--> this progrm removes extra whitespaces from start and end , capitalizes first letter and lower cases others
+
+
+LOGICAL OPERATORS
+and  -  &&
+or   -  ||
+not  -  !
+
+
+FUNCTIONS 
+a section of reuable code 
+-> declared once it can be used multiple times 
+
+
+
+CALLBACK 
+a function that is passed as an argument to another function
+
+            Used to handle asynchronous function
+            1)Reading a file
+            2)Network requests 
+            3)Interacting with databases 
+async function may take variable time, javascript dosent wait for the func. to get exicuted first,
+thus to handle this we use callbacks 
+sum(display,3,4);
+
+function sum(callback, x, y){
+    let ans=x+y;
+    callback(ans);
+}
+
+function display(x){
+    console.log(x);
+}
+
+
+FOREACH 
+forEach();--> used to iterate over the elements of an array and apply a specified function (callbacks)
+              to each element.
+              
+              array.forEach(callback);
+              array , element and index are provided to us 
+
+numbers=[1,2,3,4,5];
+numbers.forEach(double);
+function double(element, index , array){
+    array[index]=element*2;
+}
+
+
+MAP method
+it is similar to for each, but it returns a new array after exicuting callback on every element 
+
+const num=[1,2,3,4];
+const sqr=num.map(square);
+function square (element){
+    return Math.pow(element,2);
+}
+
+
+note--->>> `` is used to tell that whenever string inside the quote has ${ } treate it like a java code(different from string)
+
+FILTER method
+.filter() creates a new array by filtering out elements 
+let numbers=[1,2,3,4,5,6,7]
+let even=number.filter(isEven);
+
+function isEven(x){
+    return x%2===0;                     // returns a boolean value(T/F)
+}
+
+
+REDUCE method 
+.reduce()  ->  reduces elements of an array to a single value
+
+let nums=[1,2,3,4,5]
+let sum=nums.reduce(add);
+function add(previous,element){
+    return previous+element;
+}
+
+
+THIS KEYWORD
+const person1={
+    name:"rohan kumar";
+    age:"20"
+    sayHello:function(){console.log(`hello my name is ${ name } `);} this won't work, instead -> 'this.name' 
+                                                                    also "this" is not compatable with  arrow function.
+}
+
+
+CONSTRUCTOR 
+a special method for defining the properties and methods of an object.
+example:-
+            function Car(maker, model, year, color){
+                this.maker=maker;
+                this.model=model;
+                this.year=year;
+                this.color=color;
+                this.msg=function(){console.log(`you drive ${this.model}`);}
+            }
+
+            const car1=new Car("ford","gt","2020","black");
+
+an object named car1 is created and its property is also set;
+//Car() is reusable 
+
+
+CLASS
+it gives us a more stuctured way of working with objects in comparison to traditional constructor methods;
+ex. encapsulation , inheritance and static keywords 
+
+class product {
+    constructor(name,price){
+        this.name=name;
+        this.price=price;
+    }
+
+    displayProduct(){                                            // no need to declare it as function inside class.
+        console.log(`name of the product is ${this.name}`);
+        console.log(`price of the product is ${this.price}`);
+    }
+
+}
+const pdt1=new product("watch","6000");
+pdt1.displayProduct();
+
+
+STATIC 
+keyword that defines properties and methods that belong to a class itself rather than objects created from that object.( class owns anything static rather than objects)
+ex:-
+    class num{
+        static count=19;
+    }
+    const num1=new num();
+    console.log(num1.count);   ---> error 
+    console.log(num.count);    ---> correct as static belongs to class not the object.
+
+
+INHERITANCE 
+allows you  to inherit properties and methods from an existing class (parent -> child)
+helps in code reuablility 
+ex: 
+    class animal{
+
+    }
+    class rabbit extends animal{
+
+    }
+
+
+SUPER
+keyword is used in classes to call the constructor or access properties and methods of a parent (super class)
+
+GETTER AND SETTER
+getter- special method that makes a property readable 
+setter- special method that makes a property writable
+
+class person{
+
+    constructor(name, age , gender){
+        this.name=name;
+        this.age=age;
+        this.gender=gender;
+    }
+
+    set name (newName){
+        this._name=newName;
+    }
+    set age (newAge){
+        this._age=newName;
+    }
+    set gender (newGender){
+        this._=newGender;
+    }
+    get name(){
+        return this._name;              // returns private property 
+    }
+}
+
+const adi=new person("aryan", 200, "male");
+console.log(adi.name);
