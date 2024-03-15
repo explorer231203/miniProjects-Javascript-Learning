@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25vh;
+    text-align: center;
+    background-color: beige;
+    margin-left: 33vw;
+    width: 34vw;
+    height: 50vh                                                    ;
+}
+.button{
+    font-size: 2rem;
+}
