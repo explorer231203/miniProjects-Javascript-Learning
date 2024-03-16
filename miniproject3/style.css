@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.ayush{
+    width: 350px;
+    height: 350px;
+    background-color: red;
+    position: absolute;
+    background-image: url('sleep.jpg'); /* URL should be inside quotes */
+    text-align: center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 2rem;
+    color: black;
+}
